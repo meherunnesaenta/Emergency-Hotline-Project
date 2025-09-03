@@ -6,7 +6,7 @@ for(const heart of hearts){
         document.getElementById("count").innerText=counter;
     })
 }
-let copyCount=0;
+let copyCount=1;
 function copied(id){
  document.getElementById("Copy").innerText=copyCount;
         copyCount++;
