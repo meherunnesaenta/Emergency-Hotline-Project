@@ -26,7 +26,7 @@ function getResult(buttonId , NameId,NumberId , NameTilte){
          alert("📞calling "+ result.Name+" "+result.Number);
          document.getElementById('coin').innerText=call;
          const date = new Date();
-         const time = date.toLocaleTimeString();
+         const time = date.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' ,second: '2-digit'});
          const div=document.createElement('div');
          div.innerHTML=`<div class='flex justify-between items-center p-[16px] bg-[#fafafa] rounded-2xl m-[8px]'>
                 <div>
@@ -40,6 +40,10 @@ function getResult(buttonId , NameId,NumberId , NameTilte){
     
     })
 }
+    document.getElementById("Clear").addEventListener("click",function(){
+        document.getElementById("call-parent").innerHTML='';
+    })
+
 
    getResult('calling1','national','numberN',"title1");  
    getResult('calling2','police','policeNumber',"title2");  
