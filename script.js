@@ -6,6 +6,45 @@ for(const heart of hearts){
         document.getElementById("count").innerText=counter;
     })
 }
+let copyCount=0;
+function copied(id){
+ document.getElementById("Copy").innerText=copyCount;
+        copyCount++;
+        const textToCopy= document.getElementById(id).innerText;
+        alert("Number copied "+textToCopy);
+        navigator.clipboard.writeText(textToCopy);
+}
+
+
+    document.getElementById("Copy-btn1").addEventListener("click",function(){
+        copied("numberN");
+    })
+    document.getElementById("Copy-btn2").addEventListener("click",function(){
+        copied("policeNumber");
+    })
+    document.getElementById("Copy-btn3").addEventListener("click",function(){
+        copied("firenum");
+    })
+    document.getElementById("Copy-btn4").addEventListener("click",function(){
+        copied("ambunum");
+    })
+    document.getElementById("Copy-btn5").addEventListener("click",function(){
+        copied("woamanNumber");
+    })
+     document.getElementById("Copy-btn6").addEventListener("click",function(){
+        copied("antiNum");
+    })
+    document.getElementById("Copy-btn7").addEventListener("click",function(){
+        copied("electicityNumber");
+    })
+    document.getElementById("Copy-btn8").addEventListener("click",function(){
+        copied("bracNumber");
+    })
+    document.getElementById("Copy-btn9").addEventListener("click",function(){
+        copied("railwayNumber");
+    })
+
+
 
 function getNameAndNumber(id,id1,id3){
     const Name = document.getElementById(id).innerText;
@@ -26,7 +65,7 @@ function getResult(buttonId , NameId,NumberId , NameTilte){
          alert("📞calling "+ result.Name+" "+result.Number);
          document.getElementById('coin').innerText=call;
          const date = new Date();
-         const time = date.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' ,second: '2-digit'});
+         const time = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
          const div=document.createElement('div');
          div.innerHTML=`<div class='flex justify-between items-center p-[16px] bg-[#fafafa] rounded-2xl m-[8px]'>
                 <div>
